@@ -2,13 +2,15 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "module": "commonjs",
-    "target": "es2017",
+    "target": "es6",
     "sourceMap": false,
     "experimentalDecorators": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "declaration": true,
+    "outDir": "dist",
+    "rootDir": ".",
     "lib": [
       "es2017.object",
       "es2015",

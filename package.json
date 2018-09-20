@@ -15,15 +15,18 @@
     "type": "git",
     "url": "https://github.com/yannickbattail/fulgens.git"
   },
-  "scripts": {},
-  "dependencies": {},
-  "optionalDependencies": {},
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --outDir dist/",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "portable-fetch": "^3.0.0",
+    "url": "^0.11.0"
+  },
   "devDependencies": {
-    "@types/jasmine": "^2.8.8",
-    "jasmine": "^3.1.0",
-    "tslint": "5.7.0",
-    "tslint-eslint-rules": "4.1.1",
-    "tsutils": "2.20.0",
-    "typescript": "~3.0.1"
+    "@types/node": "^8.0.9",
+    "typescript": "^2.0"
   }
 }
