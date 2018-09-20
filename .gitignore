@@ -61,3 +61,5 @@ typings/
 .next
 
 typings
+
+swagger-codegen-cli.jar
