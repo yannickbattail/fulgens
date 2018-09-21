@@ -81,104 +81,92 @@ export class RequiredError extends Error {
 /**
  * 
  * @export
- * @interface CoordinateInt2D
+ * @interface GlobalInstruction
  */
-export interface CoordinateInt2D {
-    /**
-     * 
-     * @type {number}
-     * @memberof CoordinateInt2D
-     */
-    x?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CoordinateInt2D
-     */
-    y?: number;
-}
-
-/**
- * 
- * @export
- * @interface GlobalInstructionCoordinateInt2D
- */
-export interface GlobalInstructionCoordinateInt2D {
+export interface GlobalInstruction {
     /**
      * 
      * @type {string}
-     * @memberof GlobalInstructionCoordinateInt2D
+     * @memberof GlobalInstruction
      */
     type?: string;
     /**
      * 
      * @type {string}
-     * @memberof GlobalInstructionCoordinateInt2D
+     * @memberof GlobalInstruction
      */
     droneName?: string;
     /**
      * 
-     * @type {CoordinateInt2D}
-     * @memberof GlobalInstructionCoordinateInt2D
+     * @type {ICoordinate}
+     * @memberof GlobalInstruction
      */
-    destination?: CoordinateInt2D;
+    destination?: ICoordinate;
 }
 
 /**
  * 
  * @export
- * @interface IDroneDtoCoordinateInt2D
+ * @interface ICoordinate
  */
-export interface IDroneDtoCoordinateInt2D {
+export interface ICoordinate {
+}
+
+/**
+ * 
+ * @export
+ * @interface IDroneDto
+ */
+export interface IDroneDto {
     /**
      * 
      * @type {string}
-     * @memberof IDroneDtoCoordinateInt2D
+     * @memberof IDroneDto
      */
     name?: string;
     /**
      * 
-     * @type {IInstructionCoordinateInt2D}
-     * @memberof IDroneDtoCoordinateInt2D
+     * @type {IInstruction}
+     * @memberof IDroneDto
      */
-    lastInstruction?: IInstructionCoordinateInt2D;
+    lastInstruction?: IInstruction;
     /**
      * 
-     * @type {CoordinateInt2D}
-     * @memberof IDroneDtoCoordinateInt2D
+     * @type {ICoordinate}
+     * @memberof IDroneDto
      */
-    currentPosition?: CoordinateInt2D;
-    /**
-     * 
-     * @type {number}
-     * @memberof IDroneDtoCoordinateInt2D
-     */
-    state?: IDroneDtoCoordinateInt2D.StateEnum;
+    currentPosition?: ICoordinate;
     /**
      * 
      * @type {number}
-     * @memberof IDroneDtoCoordinateInt2D
+     * @memberof IDroneDto
+     */
+    state?: IDroneDto.StateEnum;
+    /**
+     * 
+     * @type {number}
+     * @memberof IDroneDto
      */
     speed?: number;
     /**
      * 
      * @type {number}
-     * @memberof IDroneDtoCoordinateInt2D
+     * @memberof IDroneDto
      */
     storageSize?: number;
     /**
      * 
      * @type {ResourceQuantity}
-     * @memberof IDroneDtoCoordinateInt2D
+     * @memberof IDroneDto
      */
     storage?: ResourceQuantity;
 }
 
 /**
  * @export
- * @namespace IDroneDtoCoordinateInt2D
+ * @namespace IDroneDto
  */
-export namespace IDroneDtoCoordinateInt2D {
+export namespace IDroneDto {
     /**
      * @export
      * @enum {string}
@@ -192,49 +180,49 @@ export namespace IDroneDtoCoordinateInt2D {
 /**
  * 
  * @export
- * @interface IInstructionCoordinateInt2D
+ * @interface IInstruction
  */
-export interface IInstructionCoordinateInt2D {
+export interface IInstruction {
     /**
      * 
      * @type {string}
-     * @memberof IInstructionCoordinateInt2D
+     * @memberof IInstruction
      */
     type?: string;
     /**
      * 
      * @type {Date}
-     * @memberof IInstructionCoordinateInt2D
+     * @memberof IInstruction
      */
     startedAt?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof IInstructionCoordinateInt2D
+     * @memberof IInstruction
      */
     endAt?: Date;
     /**
      * 
      * @type {number}
-     * @memberof IInstructionCoordinateInt2D
+     * @memberof IInstruction
      */
     duration?: number;
     /**
      * 
      * @type {number}
-     * @memberof IInstructionCoordinateInt2D
+     * @memberof IInstruction
      */
     progression?: number;
     /**
      * 
      * @type {Date}
-     * @memberof IInstructionCoordinateInt2D
+     * @memberof IInstruction
      */
     abortedAt?: Date;
     /**
      * 
      * @type {boolean}
-     * @memberof IInstructionCoordinateInt2D
+     * @memberof IInstruction
      */
     isAborted?: boolean;
 }
@@ -242,83 +230,83 @@ export interface IInstructionCoordinateInt2D {
 /**
  * 
  * @export
- * @interface IItemCoordinateInt2D
+ * @interface IItem
  */
-export interface IItemCoordinateInt2D {
+export interface IItem {
     /**
      * 
      * @type {string}
-     * @memberof IItemCoordinateInt2D
+     * @memberof IItem
      */
     type?: string;
     /**
      * 
      * @type {string}
-     * @memberof IItemCoordinateInt2D
+     * @memberof IItem
      */
     name?: string;
     /**
      * 
-     * @type {CoordinateInt2D}
-     * @memberof IItemCoordinateInt2D
+     * @type {ICoordinate}
+     * @memberof IItem
      */
-    position?: CoordinateInt2D;
+    position?: ICoordinate;
 }
 
 /**
  * 
  * @export
- * @interface IMapInfoCoordinateInt2D
+ * @interface IMapInfo
  */
-export interface IMapInfoCoordinateInt2D {
+export interface IMapInfo {
     /**
      * 
      * @type {string}
-     * @memberof IMapInfoCoordinateInt2D
+     * @memberof IMapInfo
      */
     name?: string;
     /**
      * 
-     * @type {TupleCoordinateInt2DCoordinateInt2D}
-     * @memberof IMapInfoCoordinateInt2D
+     * @type {TupleICoordinateICoordinate}
+     * @memberof IMapInfo
      */
-    dimensions?: TupleCoordinateInt2DCoordinateInt2D;
+    dimensions?: TupleICoordinateICoordinate;
     /**
      * 
-     * @type {CoordinateInt2D}
-     * @memberof IMapInfoCoordinateInt2D
+     * @type {ICoordinate}
+     * @memberof IMapInfo
      */
-    droneSpawnPoint?: CoordinateInt2D;
+    droneSpawnPoint?: ICoordinate;
     /**
      * 
-     * @type {Array&lt;IItemCoordinateInt2D&gt;}
-     * @memberof IMapInfoCoordinateInt2D
+     * @type {Array&lt;IItem&gt;}
+     * @memberof IMapInfo
      */
-    items?: Array<IItemCoordinateInt2D>;
+    items?: Array<IItem>;
 }
 
 /**
  * 
  * @export
- * @interface IPlayerContextDtoCoordinateInt2D
+ * @interface IPlayerContextDto
  */
-export interface IPlayerContextDtoCoordinateInt2D {
+export interface IPlayerContextDto {
     /**
      * 
-     * @type {Array&lt;IDroneDtoCoordinateInt2D&gt;}
-     * @memberof IPlayerContextDtoCoordinateInt2D
+     * @type {Array&lt;IDroneDto&gt;}
+     * @memberof IPlayerContextDto
      */
-    drones?: Array<IDroneDtoCoordinateInt2D>;
+    drones?: Array<IDroneDto>;
     /**
      * 
      * @type {string}
-     * @memberof IPlayerContextDtoCoordinateInt2D
+     * @memberof IPlayerContextDto
      */
     playerName?: string;
     /**
      * 
      * @type {Array&lt;ResourceQuantity&gt;}
-     * @memberof IPlayerContextDtoCoordinateInt2D
+     * @memberof IPlayerContextDto
      */
     resources?: Array<ResourceQuantity>;
 }
@@ -361,21 +349,21 @@ export namespace ResourceQuantity {
 /**
  * 
  * @export
- * @interface TupleCoordinateInt2DCoordinateInt2D
+ * @interface TupleICoordinateICoordinate
  */
-export interface TupleCoordinateInt2DCoordinateInt2D {
+export interface TupleICoordinateICoordinate {
     /**
      * 
-     * @type {CoordinateInt2D}
-     * @memberof TupleCoordinateInt2DCoordinateInt2D
+     * @type {ICoordinate}
+     * @memberof TupleICoordinateICoordinate
      */
-    item1?: CoordinateInt2D;
+    item1?: ICoordinate;
     /**
      * 
-     * @type {CoordinateInt2D}
-     * @memberof TupleCoordinateInt2DCoordinateInt2D
+     * @type {ICoordinate}
+     * @memberof TupleICoordinateICoordinate
      */
-    item2?: CoordinateInt2D;
+    item2?: ICoordinate;
 }
 
 
@@ -387,11 +375,11 @@ export const AilurusApiFetchParamCreator = function (configuration?: Configurati
     return {
         /**
          * 
-         * @param {Array&lt;GlobalInstructionCoordinateInt2D&gt;} instructions 
+         * @param {Array&lt;GlobalInstruction&gt;} instructions 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        instructionsPost(instructions: Array<GlobalInstructionCoordinateInt2D>, options: any = {}): FetchArgs {
+        instructionsPost(instructions: Array<GlobalInstruction>, options: any = {}): FetchArgs {
             // verify required parameter 'instructions' is not null or undefined
             if (instructions === null || instructions === undefined) {
                 throw new RequiredError('instructions','Required parameter instructions was null or undefined when calling instructionsPost.');
@@ -408,7 +396,7 @@ export const AilurusApiFetchParamCreator = function (configuration?: Configurati
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Array&lt;GlobalInstructionCoordinateInt2D&gt;" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            const needsSerialization = (<any>"Array&lt;GlobalInstruction&gt;" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(instructions || {}) : (instructions || "");
 
             return {
@@ -471,11 +459,11 @@ export const AilurusApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {Array&lt;GlobalInstructionCoordinateInt2D&gt;} instructions 
+         * @param {Array&lt;GlobalInstruction&gt;} instructions 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        instructionsPost(instructions: Array<GlobalInstructionCoordinateInt2D>, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Array<string>> {
+        instructionsPost(instructions: Array<GlobalInstruction>, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Array<string>> {
             const localVarFetchArgs = AilurusApiFetchParamCreator(configuration).instructionsPost(instructions, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -492,7 +480,7 @@ export const AilurusApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mapGet(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<IMapInfoCoordinateInt2D> {
+        mapGet(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<IMapInfo> {
             const localVarFetchArgs = AilurusApiFetchParamCreator(configuration).mapGet(options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -509,7 +497,7 @@ export const AilurusApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playerContextGet(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<IPlayerContextDtoCoordinateInt2D> {
+        playerContextGet(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<IPlayerContextDto> {
             const localVarFetchArgs = AilurusApiFetchParamCreator(configuration).playerContextGet(options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -532,11 +520,11 @@ export const AilurusApiFactory = function (configuration?: Configuration, fetch?
     return {
         /**
          * 
-         * @param {Array&lt;GlobalInstructionCoordinateInt2D&gt;} instructions 
+         * @param {Array&lt;GlobalInstruction&gt;} instructions 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        instructionsPost(instructions: Array<GlobalInstructionCoordinateInt2D>, options?: any) {
+        instructionsPost(instructions: Array<GlobalInstruction>, options?: any) {
             return AilurusApiFp(configuration).instructionsPost(instructions, options)(fetch, basePath);
         },
         /**
@@ -572,7 +560,7 @@ export class AilurusApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AilurusApi
      */
-    public instructionsPost(instructions: Array<GlobalInstructionCoordinateInt2D>, options?: any) {
+    public instructionsPost(instructions: Array<GlobalInstruction>, options?: any) {
         return AilurusApiFp(this.configuration).instructionsPost(instructions, options)(this.fetch, this.basePath);
     }
 
