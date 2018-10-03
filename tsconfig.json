@@ -1,25 +1,23 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "target": "es6",
-    "sourceMap": false,
-    "experimentalDecorators": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "declaration": true,
-    "outDir": "dist",
-    "rootDir": ".",
+    "moduleResolution": "Node",
+    "target": "ES5",
+    "module": "system",
+    "noEmit": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/typings"
+    ],
     "lib": [
-      "es2017.object",
-      "es2015",
-      "es2017",
-      "dom"
-    ]
+      "es2016",
+      "dom",
+      "es5"
+  ]
   },
-  "exclude": [
-    "node_modules",
-    "dist/"
+  "include": [
+    "src/**/*"
   ]
 }

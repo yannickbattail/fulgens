@@ -1,32 +1,56 @@
 {
-  "name": "fulgens",
-  "version": "0.1.0",
-  "private": true,
-  "branchPattern": "0.*",
-  "description": "Type script client for ailurus api",
-  "homepage": "https://github.com/yannickbattail/fulgens",
-  "bugs": "https://github.com/yannickbattail/fulgens/issues",
-  "license": "GPL",
-  "engines": {
-    "node": ">=10.9.0 <11.0.0",
-    "yarn": ">=1.9.2 <2.0.0"
+  "name": "typescript-playground",
+  "version": "1.6.2",
+  "description": "TypeScript Playground",
+  "dependencies": {
+    "portable-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.2",
+    "add": "^2.0.6",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-less": "^3.3.2",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "live-server": "^1.2.0",
+    "lodash.debounce": "^4.0.8",
+    "monaco-editor": "^0.14.3",
+    "monaco-typescript": "^3.2.0",
+    "normalize.css": "^8.0.0",
+    "raw-loader": "^0.5.1",
+    "source-map-loader": "^0.2.1",
+    "ts-loader": "^5.0.0",
+    "typescript": "^2.1.6",
+    "uglify-js": "^3.4.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.11.1",
+    "webpack-stream": "^5.1.1",
+    "@types/node": "^8.0.9"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/gulp build",
+    "watch": "node_modules/.bin/gulp watch",
+    "serve": "node_modules/.bin/live-server ./docs"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yannickbattail/fulgens.git"
+    "url": "git+https://github.com/fabiandev/typescript-playground.git"
   },
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsc --outDir dist/",
-    "prepublishOnly": "npm run build"
+  "keywords": [
+    "typescript",
+    "playground"
+  ],
+  "author": "Fabian Pirklbauer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabiandev/typescript-playground/issues"
   },
-  "dependencies": {
-    "portable-fetch": "^3.0.0",
-    "url": "^0.11.0"
-  },
-  "devDependencies": {
-    "@types/node": "^8.0.9",
-    "typescript": "^2.0"
-  }
+  "homepage": "https://github.com/fabiandev/typescript-playground#readme"
 }
