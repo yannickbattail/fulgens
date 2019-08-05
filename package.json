@@ -7,6 +7,7 @@
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.2",
+    "@types/node": "^8.0.9",
     "add": "^2.0.6",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.0",
@@ -15,11 +16,11 @@
     "gulp-babel": "^7.0.0",
     "gulp-clean-css": "^3.7.0",
     "gulp-less": "^3.3.2",
-    "gulp-preprocess": "^2.0.0",
+    "gulp-preprocess": "^3.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
-    "live-server": "^1.2.0",
+    "live-server": "^1.2.1",
     "lodash.debounce": "^4.0.8",
     "monaco-editor": "^0.14.3",
     "monaco-typescript": "^3.2.0",
@@ -31,8 +32,7 @@
     "uglify-js": "^3.4.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.11.1",
-    "webpack-stream": "^5.1.1",
-    "@types/node": "^8.0.9"
+    "webpack-stream": "^5.1.1"
   },
   "scripts": {
     "build": "node_modules/.bin/gulp build",
