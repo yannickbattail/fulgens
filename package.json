@@ -3,6 +3,8 @@
   "version": "1.6.2",
   "description": "TypeScript Playground",
   "dependencies": {
+    "ajv": "^6.10.2",
+    "ajv-keywords": "^3.4.1",
     "portable-fetch": "^3.0.0"
   },
   "devDependencies": {
